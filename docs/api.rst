@@ -13,6 +13,12 @@ High Level API
 .. automodule:: pynamodb.indexes
     :members:
 
+.. automodule:: pynamodb.transactions
+    :members:
+
+.. automodule:: pynamodb.pagination
+    :members:
+
 Low Level API
 -------------
 
@@ -33,8 +39,3 @@ Exceptions
 .. autoexception:: pynamodb.exceptions.TableDoesNotExist
 .. autoexception:: pynamodb.exceptions.DoesNotExist
 
-Migration API
--------------
-
-.. automodule:: pynamodb.migration
-    :members:

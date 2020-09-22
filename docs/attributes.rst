@@ -4,7 +4,7 @@ Custom Attributes
 Attributes in PynamoDB are classes that are serialized to and from DynamoDB attributes. PynamoDB provides attribute classes
 for all DynamoDB data types, as defined in the `DynamoDB documentation <http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataModel.html>`_.
 Higher level attribute types (internally stored as a DynamoDB data types) can be defined with PynamoDB. Two such types
-are included with PynamoDB for convenience: ``JSONAttribute`` and ``UnicodeDatetimeAttribute``.
+are included with PynamoDB for convenience: ``JSONAttribute`` and ``UTCDateTimeAttribute``.
 
 Attribute Methods
 -----------------
@@ -181,7 +181,7 @@ When defining your model use the ``of=`` kwarg and pass in a class. PynamoDB wil
 Map Attributes
 --------------
 
-DynamoDB map attributes are objects embedded inside of top level models. See the examples `here <https://github.com/pynamodb/PynamoDB/tree/devel/examples/office_model.py>`_.
+DynamoDB map attributes are objects embedded inside of top level models. See the examples `here <https://github.com/pynamodb/PynamoDB/blob/master/examples/office_model.py>`_.
 When implementing your own MapAttribute you can simply extend ``MapAttribute`` and ignore writing serialization code.
 These attributes can then be used inside of Model classes just like any other attribute.
 

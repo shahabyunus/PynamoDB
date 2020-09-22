@@ -1,20 +1,10 @@
-import os
-import sys
-
 from setuptools import setup, find_packages
 
-if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
-    os.system('python setup.py bdist_wheel upload')
-    print("Now tag me :)")
-    print("  git tag -a {0} -m 'version {0}'".format(__import__('pynamodb').__version__))
-    print("  git push --tags")
-    sys.exit()
 
 install_requires = [
-    'six',
-    'botocore>=1.2.0',
+    'botocore>=1.12.54',
     'python-dateutil>=2.1,<3.0.0',
+    'amazon-dax-client>=1.1.7'
 ]
 
 setup(
@@ -31,7 +21,7 @@ setup(
     keywords='python dynamodb amazon dax',
     install_requires=install_requires,
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Programming Language :: Python',
         'Operating System :: OS Independent',
@@ -42,4 +32,5 @@ setup(
     extras_require={
         'signals': ['blinker>=1.3,<2.0']
     },
+    package_data={'pynamodb': ['py.typed']},
 )

@@ -19,6 +19,7 @@ Features
 * Batch operations with automatic pagination
 * Iterators for working with Query and Scan operations
 * `Fully tested <https://coveralls.io/r/pynamodb/PynamoDB>`_
+* Dax support
 
 Topics
 ======
@@ -33,6 +34,9 @@ Topics
    updates
    conditional
    attributes
+   transaction
+   optimistic_locking
+   rate_limited_operations
    local
    backup_restore
    signals
@@ -44,6 +48,7 @@ Topics
    contributing
    release_notes
    versioning
+   dax
 
 API docs
 ========
