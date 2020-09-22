@@ -18,28 +18,28 @@ install_requires = [
 ]
 
 setup(
-    name='pynamodb',
+    name='pynamodb-dax',
     version=__import__('pynamodb').__version__,
     packages=find_packages(),
-    url='http://jlafon.io/pynamodb.html',
-    author='Jharrod LaFon',
-    author_email='jlafon@eyesopen.com',
-    description='A Pythonic Interface to DynamoDB',
+    url='https://github.com/thanakijwanavit/PynamoDB',
+    author='Nic Wanavit (fork)',
+    author_email='nwanavit@gmail.com',
+    description='fork to pynamodb for supporting dax',
     long_description=open('README.rst').read(),
     zip_safe=False,
     license='MIT',
-    keywords='python dynamodb amazon',
+    keywords='python dynamodb amazon dax',
     install_requires=install_requires,
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Programming Language :: Python',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.8',
         'License :: OSI Approved :: MIT License',
     ],
     extras_require={
-        'signals': ['blinker>=1.3,<2.0'] 
+        'signals': ['blinker>=1.3,<2.0']
     },
 )

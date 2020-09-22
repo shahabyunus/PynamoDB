@@ -60,3 +60,7 @@ cover/
 
 # Ignore Cache
 .cache/
+
+
+build/
+dist/

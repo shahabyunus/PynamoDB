@@ -141,6 +141,26 @@ Retrieve an existing user:
 
 Advanced Usage
 ==============
+Dax usage
+
+
+.. code-block:: python
+
+    from pynamodb.models import Model
+    from pynamodb.indexes import GlobalSecondaryIndex, AllProjection
+    from pynamodb.attributes import NumberAttribute, UnicodeAttribute
+
+    class UserModel(Model):
+        """
+        A DynamoDB User
+        """
+        class Meta:
+            table_name = "dynamodb-user"
+            dax_read_endpoints = ['xxxx:8111']
+            dax_write_endpoints = ['xxxx:8111']
+        email = UnicodeAttribute(null=True)
+        first_name = UnicodeAttribute(range_key=True)
+        last_name = UnicodeAttribute(hash_key=True)
 
 Want to use indexes? No problem:
 

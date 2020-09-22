@@ -5,6 +5,6 @@ PynamoDB Library
 A simple abstraction over DynamoDB
 
 """
-__author__ = 'Jharrod LaFon'
+__author__ = 'Nic Wanavit'
 __license__ = 'MIT'
-__version__ = '3.3.1'
+__version__ = '0.0.1'
